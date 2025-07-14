@@ -136,3 +136,5 @@ dist
 wrangler.toml
 .dev.vars
 pnpm-lock.yaml
+.DS_Store
+.gitgnore
