@@ -105,7 +105,12 @@ const { locale, t } = useI18n({
         }
     }
 });
-
+const loginAndBindTag = computed(() => {
+    if (userSettings.value.user_email) {
+        return t('loginAndBind')
+    }
+    return t('login')
+})
 const addressRegex = computed(() => {
     try {
         if (openSettings.value.addressRegex) {
@@ -117,7 +122,6 @@ const addressRegex = computed(() => {
     }
     return /[^a-z0-9]/g;
 });
-
 const generateNameLoading = ref(false);
 const generateName = async () => {
     try {
@@ -129,7 +133,6 @@ const generateName = async () => {
             .replace(/\.{2,}/g, '.')
             .replace(addressRegex.value, '')
             .toLowerCase();
-        // support maxAddressLen
         if (emailName.value.length > openSettings.value.maxAddressLen) {
             emailName.value = emailName.value.slice(0, openSettings.value.maxAddressLen);
         }
@@ -212,7 +215,7 @@ onMounted(async () => {
             <span>{{ t('bindUserInfo') }}</span>
         </n-alert>
         <n-tabs v-if="openSettings.fetched" v-model:value="tabValue" size="large" justify-content="space-evenly">
-            <n-tab-pane name="signin" :tab="t('login')">
+            <n-tab-pane name="signin" :tab="loginAndBindTag">
                 <n-form>
                     <n-form-item-row :label="t('credential')" required>
                         <n-input v-model:value="credential" type="textarea" :autosize="{ minRows: 3 }" />
@@ -221,7 +224,7 @@ onMounted(async () => {
                         <template #icon>
                             <n-icon :component="EmailOutlined" />
                         </template>
-                        {{ t('login') }}
+                        {{ loginAndBindTag }}
                     </n-button>
                     <n-button v-if="showNewAddressTab" @click="tabValue = 'register'" block secondary strong>
                         <template #icon>
