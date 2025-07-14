@@ -93,6 +93,8 @@ const { locale, t } = useI18n({
             getNewEmailTip1: '请输入你想要使用的邮箱地址, 只允许: ',
             getNewEmailTip2: '留空将会生成一个随机的邮箱地址。',
             getNewEmailTip3: '你可以从下拉列表中选择一个域名。',
+			getNewEmailTip4: '注册并登陆后，方可使用 [abcd.pm] 域名。',
+			getNewEmailTip5: '注：[aurl.pp.ua]、[kuwi.pp.ua]、[yotu.pp.ua]、[gede.eu.org] 域名仅支持接收邮件，不支持发送邮件。',
             credential: '邮箱地址凭据',
             ok: '确定',
             generateName: '生成随机名字',
