@@ -71,6 +71,7 @@ const { locale, t } = useI18n({
     messages: {
         en: {
             login: 'Login',
+			loginAndBind: 'Login and Bind',
             pleaseGetNewEmail: 'Please login or click "Get New Email" button to get a new email address',
             getNewEmail: 'Create New Email',
             getNewEmailTip1: 'Please input the email you want to use. only allow: ',
@@ -88,6 +89,7 @@ const { locale, t } = useI18n({
         },
         zh: {
             login: '登录',
+			loginAndBind: '登录并绑定',
             pleaseGetNewEmail: '请"登录"或点击 "注册新邮箱" 按钮来获取一个新的邮箱地址',
             getNewEmail: '创建新邮箱',
             getNewEmailTip1: '请输入你想要使用的邮箱地址, 只允许: ',
