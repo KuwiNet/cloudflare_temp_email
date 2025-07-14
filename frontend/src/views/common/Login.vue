@@ -71,12 +71,13 @@ const { locale, t } = useI18n({
     messages: {
         en: {
             login: 'Login',
-            loginAndBind: 'Login and Bind',
             pleaseGetNewEmail: 'Please login or click "Get New Email" button to get a new email address',
             getNewEmail: 'Create New Email',
             getNewEmailTip1: 'Please input the email you want to use. only allow: ',
             getNewEmailTip2: 'Levaing it blank will generate a random email address.',
             getNewEmailTip3: 'You can choose a domain from the dropdown list.',
+            getNewEmailTip4: 'After registering and logging in, you can use the [abcd.pm] domain name.',
+            getNewEmailTip5: 'Note: The domain names [aurl.pp.ua] and [aurl.us.kg] only support receiving emails, not sending emails.',
             credential: 'Email Address Credential',
             ok: 'OK',
             generateName: 'Generate Fake Name',
@@ -87,14 +88,13 @@ const { locale, t } = useI18n({
         },
         zh: {
             login: '登录',
-            loginAndBind: '登录并绑定',
             pleaseGetNewEmail: '请"登录"或点击 "注册新邮箱" 按钮来获取一个新的邮箱地址',
             getNewEmail: '创建新邮箱',
             getNewEmailTip1: '请输入你想要使用的邮箱地址, 只允许: ',
             getNewEmailTip2: '留空将会生成一个随机的邮箱地址。',
             getNewEmailTip3: '你可以从下拉列表中选择一个域名。',
-			getNewEmailTip4: '注册并登陆后，方可使用 [abcd.pm] 域名。',
-			getNewEmailTip5: '注：[aurl.pp.ua]、[kuwi.pp.ua]、[yotu.pp.ua]、[gede.eu.org] 域名仅支持接收邮件，不支持发送邮件。',
+            getNewEmailTip4: '注册并登陆后，方可使用 [abcd.pm] 域名。',
+            getNewEmailTip5: '注：[aurl.pp.ua]、[aurl.us.kg] 域名仅支持接收邮件，不支持发送邮件。',
             credential: '邮箱地址凭据',
             ok: '确定',
             generateName: '生成随机名字',
@@ -105,13 +105,6 @@ const { locale, t } = useI18n({
         }
     }
 });
-
-const loginAndBindTag = computed(() => {
-    if (userSettings.value.user_email) {
-        return t('loginAndBind')
-    }
-    return t('login')
-})
 
 const addressRegex = computed(() => {
     try {
@@ -219,7 +212,7 @@ onMounted(async () => {
             <span>{{ t('bindUserInfo') }}</span>
         </n-alert>
         <n-tabs v-if="openSettings.fetched" v-model:value="tabValue" size="large" justify-content="space-evenly">
-            <n-tab-pane name="signin" :tab="loginAndBindTag">
+            <n-tab-pane name="signin" :tab="t('login')">
                 <n-form>
                     <n-form-item-row :label="t('credential')" required>
                         <n-input v-model:value="credential" type="textarea" :autosize="{ minRows: 3 }" />
@@ -228,7 +221,7 @@ onMounted(async () => {
                         <template #icon>
                             <n-icon :component="EmailOutlined" />
                         </template>
-                        {{ loginAndBindTag }}
+                        {{ t('login') }}
                     </n-button>
                     <n-button v-if="showNewAddressTab" @click="tabValue = 'register'" block secondary strong>
                         <template #icon>
@@ -245,6 +238,8 @@ onMounted(async () => {
                             <p>{{ t("getNewEmailTip1") + addressRegex.source }}</p>
                             <p>{{ t("getNewEmailTip2") }}</p>
                             <p>{{ t("getNewEmailTip3") }}</p>
+                            <p>{{ t("getNewEmailTip4") }}</p>
+                            <p>{{ t("getNewEmailTip5") }}</p>
                         </span>
                         <n-button @click="generateName" style="margin-bottom: 10px;">
                             {{ t('generateName') }}

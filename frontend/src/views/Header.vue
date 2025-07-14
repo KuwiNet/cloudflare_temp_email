@@ -188,7 +188,7 @@ const menuOptions = computed(() => [
                 style: "width: 100%",
                 tag: "a",
                 target: "_blank",
-                href: "https://github.com/KuwiNet/cloudflare_temp_email",
+                href: "https://t.me/kuwihome",
             },
             {
                 default: () => version || "Github",
