@@ -51,7 +51,7 @@ const changeLocale = async (lang) => {
 const { locale, t } = useI18n({
     messages: {
         en: {
-            title: 'Cloudflare Temp Email',
+            title: 'ABCD Temp Email',
             dark: 'Dark',
             light: 'Light',
             accessHeader: 'Access Password',
@@ -62,7 +62,7 @@ const { locale, t } = useI18n({
             ok: 'OK',
         },
         zh: {
-            title: 'Cloudflare 临时邮件',
+            title: 'ABCD 临时邮件',
             dark: '暗色',
             light: '亮色',
             accessHeader: '访问密码',
@@ -188,7 +188,7 @@ const menuOptions = computed(() => [
                 style: "width: 100%",
                 tag: "a",
                 target: "_blank",
-                href: "https://github.com/dreamhunter2333/cloudflare_temp_email",
+                href: "https://github.com/KuwiNet/cloudflare_temp_email",
             },
             {
                 default: () => version || "Github",
