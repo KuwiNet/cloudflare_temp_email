@@ -11,29 +11,6 @@ run_worker_first = true
 [triggers]
 crons = [ "0 0 1 * *" ]
 
-[vars]
-DEFAULT_LANG = "zh"
-TITLE = "ABCD 临时邮箱"
-ALWAYS_SHOW_ANNOUNCEMENT = true
-PREFIX = "tmp"
-ADDRESS_REGEX = "[^a-z0-9]"
-ADMIN_CONTACT = "admin@abcd.pm"
-ADMIN_USER_ROLE = admin
-DEFAULT_DOMAINS = ["aurl.pp.ua","kuwi.pp.ua","yotu.pp.ua","gede.eu.org"]
-DOMAINS = ["abcd.pm","aurl.pp.ua","kuwi.pp.ua","yotu.pp.ua","gede.eu.org"]
-USER_DEFAULT_ROLE = "user"
-USER_ROLES = [{"domains":["abcd.pm","aurl.pp.ua","kuwi.pp.ua","yotu.pp.ua","gede.eu.org"],"prefix":"vip","role":"vip"},{"domains":["abcd.pm","aurl.pp.ua","kuwi.pp.ua","yotu.pp.ua","gede.eu.org"],"prefix":"","role":"admin"},{"domains":["abcd.pm","aurl.pp.ua","kuwi.pp.ua","yotu.pp.ua","gede.eu.org"],"prefix":"user","role":"user"}]
-JWT_SECRET = "6a7a05a1fa3e62cfeb2e4383b406b24ab721964d7b03d4540e21b179b6179549"
-BLACK_LIST = ""
-ENABLE_USER_CREATE_EMAIL = true
-ENABLE_USER_DELETE_EMAIL = true
-ENABLE_AUTO_REPLY = false
-ENABLE_WEBHOOK = true
-DISABLE_SHOW_GITHUB = true
-NO_LIMIT_SEND_ROLE = "vip"
-TG_MAX_ADDRESS = 5
-FRONTEND_URL = "https://www.abcd.pm"
-
 [[d1_databases]]
 binding = "DB"
 database_name = "abcd"
