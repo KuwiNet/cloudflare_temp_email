@@ -23,7 +23,11 @@ ADMIN_USER_ROLE = "admin"
 DEFAULT_DOMAINS = ["aurl.pp.ua","kuwi.pp.ua","yotu.pp.ua","gede.eu.org"]
 DOMAINS = ["abcd.pm","aurl.pp.ua","kuwi.pp.ua","yotu.pp.ua","gede.eu.org"]
 USER_DEFAULT_ROLE = "user"
-USER_ROLES = [{"domains":["abcd.pm","aurl.pp.ua","kuwi.pp.ua","yotu.pp.ua","gede.eu.org"],"prefix":"vip","role":"vip"},{"domains":["abcd.pm","aurl.pp.ua","kuwi.pp.ua","yotu.pp.ua","gede.eu.org"],"prefix":"","role":"admin"},{"domains":["abcd.pm","aurl.pp.ua","kuwi.pp.ua","yotu.pp.ua","gede.eu.org"],"prefix":"user","role":"user"}]
+USER_ROLES = [
+  { domains = ["abcd.pm", "aurl.pp.ua", "kuwi.pp.ua", "yotu.pp.ua", "gede.eu.org"], role = "vip", prefix = "v" },
+  { domains = ["abcd.pm", "aurl.pp.ua", "kuwi.pp.ua", "yotu.pp.ua", "gede.eu.org"], role = "admin", prefix = "" },
+  { domains = ["abcd.pm", "aurl.pp.ua", "kuwi.pp.ua", "yotu.pp.ua", "gede.eu.org"], role = "user", prefix = "u" }
+]
 BLACK_LIST = "gov.cn,edu.cn"
 ENABLE_USER_CREATE_EMAIL = true
 ENABLE_USER_DELETE_EMAIL = true
@@ -36,6 +40,7 @@ TG_MAX_ADDRESS = 5
 FRONTEND_URL = "https://www.abcd.pm"
 routes = [
   { pattern = "www.abcd.pm", custom_domain = true }
+	{ pattern = "abcd.pm", custom_domain = true }
 ]
 
 [[d1_databases]]
