@@ -39,7 +39,7 @@ NO_LIMIT_SEND_ROLE = "vip"
 TG_MAX_ADDRESS = 5
 FRONTEND_URL = "https://www.abcd.pm"
 routes = [
-  { pattern = "www.abcd.pm", custom_domain = true }
+  { pattern = "www.abcd.pm", custom_domain = true },
 	{ pattern = "abcd.pm", custom_domain = true }
 ]
 
