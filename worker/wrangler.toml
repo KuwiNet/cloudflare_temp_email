@@ -14,7 +14,7 @@ crons = [ "0 0 1 * *" ]
 [vars]
 DEFAULT_LANG = "zh"
 TITLE = "ABCD 临时邮箱"
-ANNOUNCEMENT = "<b><h3>欢迎使用<font color="blue">  ABCD 临时邮箱  </font></h3></b><p>所有收发邮件<font color="red"><b> 每月 1 日 </b></font>将自动清除，请注意绑定邮箱或记住凭证。</p><p>仅供学习和个人用途，请勿将其用于任何违法行为。</p>"
+ANNOUNCEMENT = '<b><h3>欢迎使用<font color="blue">  ABCD 临时邮箱  </font></h3></b><p>所有收发邮件<font color="red"><b> 每月 1 日 </b></font>将自动清除，请注意绑定邮箱或记住凭证。</p><p>仅供学习和个人用途，请勿将其用于任何违法行为。</p>'
 ALWAYS_SHOW_ANNOUNCEMENT = true
 PREFIX = "tmp"
 ADDRESS_REGEX = "[^a-z0-9]"
@@ -29,7 +29,7 @@ ENABLE_USER_CREATE_EMAIL = true
 ENABLE_USER_DELETE_EMAIL = true
 ENABLE_AUTO_REPLY = false
 ENABLE_WEBHOOK = true
-COPYRIGHT = "<a href="https://www.abcd.pm" target="_blank" style="text-decoration: none;">ABCD.PM</a> &nbsp; Proudly powered by <a href="https://kuwi.net" target="_blank" style="text-decoration: none;">KuWi</a>"
+COPYRIGHT = '<a href="https://www.abcd.pm" target="_blank" style="text-decoration: none;">ABCD.PM</a> &nbsp; Proudly powered by <a href="https://kuwi.net" target="_blank" style="text-decoration: none;">KuWi</a>'
 DISABLE_SHOW_GITHUB = true
 NO_LIMIT_SEND_ROLE = "vip"
 TG_MAX_ADDRESS = 5
