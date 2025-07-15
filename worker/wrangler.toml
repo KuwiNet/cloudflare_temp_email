@@ -35,7 +35,7 @@ ENABLE_AUTO_REPLY = false
 ENABLE_WEBHOOK = true
 COPYRIGHT = '<a href="https://www.abcd.pm" target="_blank" style="text-decoration: none;">ABCD.PM</a> &nbsp; Proudly powered by <a href="https://kuwi.net" target="_blank" style="text-decoration: none;">KuWi</a>'
 DISABLE_SHOW_GITHUB = true
-NO_LIMIT_SEND_ROLE = "vip"
+NO_LIMIT_SEND_ROLE = "admin,vip"
 TG_MAX_ADDRESS = 5
 FRONTEND_URL = "https://www.abcd.pm"
 routes = [
