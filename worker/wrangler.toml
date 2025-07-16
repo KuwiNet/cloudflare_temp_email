@@ -15,7 +15,7 @@ crons = [ "0 0 1 * *" ]
 DEFAULT_LANG = "zh"
 TITLE = "ABCD 临时邮箱"
 ANNOUNCEMENT = '<b><h3>欢迎使用<font color="blue">  ABCD 临时邮箱  </font></h3></b><p>所有收发邮件<font color="red"><b> 每月 1 日 </b></font>将自动清除，请注意绑定邮箱或记住凭证。</p><p>仅供学习和个人用途，请勿将其用于任何违法行为。</p>'
-ALWAYS_SHOW_ANNOUNCEMENT = true
+ALWAYS_SHOW_ANNOUNCEMENT = false
 PREFIX = "tmp"
 ADDRESS_REGEX = "[^a-z0-9]"
 ADMIN_CONTACT = "admin@abcd.pm"
